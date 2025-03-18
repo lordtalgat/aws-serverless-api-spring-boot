@@ -42,4 +42,7 @@ To deploy the application in your AWS account, you can use the SAM CLI's guided 
 $ sam deploy --guided
 ```
 
-deployed version is <a href="https://cravlafgui.execute-api.us-east-1.amazonaws.com/prod/api/posts">https://cravlafgui.execute-api.us-east-1.amazonaws.com/prod/api/posts</a>
+deployed version is <br/>
+<a href="https://cravlafgui.execute-api.us-east-1.amazonaws.com/prod/api/posts">https://cravlafgui.execute-api.us-east-1.amazonaws.com/prod/api/posts</a> <br/>
+<a href="https://cravlafgui.execute-api.us-east-1.amazonaws.com/prod/api/users">https://cravlafgui.execute-api.us-east-1.amazonaws.com/prod/api/users</a> <br/>
+<a href="https://cravlafgui.execute-api.us-east-1.amazonaws.com/prod/api/comments">https://cravlafgui.execute-api.us-east-1.amazonaws.com/prod/api/comments</a> <br/>

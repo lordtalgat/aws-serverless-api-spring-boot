@@ -1,8 +1,10 @@
-package kz.talgat.post;
+package kz.talgat.controllers;
 
 import jakarta.annotation.PostConstruct;
 
 import kz.talgat.exeptions.ItemNotFoundException;
+import kz.talgat.generators.JsonGeneratorService;
+import kz.talgat.models.Post;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +21,7 @@ public class PostController {
     private final JsonGeneratorService jsonGeneratorService;
     private List<Post> posts = new ArrayList<Post>();
 
-    public PostController(JsonGeneratorService jsonGeneratorService) {
+    public PostController(final JsonGeneratorService jsonGeneratorService) {
         this.jsonGeneratorService = jsonGeneratorService;
     }
 
@@ -58,7 +60,7 @@ public class PostController {
     @PostConstruct
     private void init() {
         if (posts.isEmpty()) {
-            log.info("Loading Posts using JsonPlaceHolderService");
+            log.info("Loading Posts using JsonGeneratorService");
             posts = jsonGeneratorService.generatePosts();
         }
     }

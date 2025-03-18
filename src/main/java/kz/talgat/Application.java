@@ -1,6 +1,6 @@
 package kz.talgat;
 
-import kz.talgat.post.JsonGeneratorService;
+import kz.talgat.generators.JsonGeneratorService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
