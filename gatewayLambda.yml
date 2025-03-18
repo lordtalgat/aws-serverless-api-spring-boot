@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: AWS Serverless Spring Boot 2 API - kz.talgat::serverless-api
+Globals:
+  Api:
+    EndpointConfiguration: REGIONAL
+
+Resources:
+  ServerlessApiFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: kz.talgat.StreamLambdaHandler::handleRequest
+      Runtime: java17
+      CodeUri: .
+      MemorySize: 512
+      Policies: [your Created policies in AIM]
+      Timeout: 30
+      Events:
+        ProxyResource:
+          Type: Api
+          Properties:
+            Path: /{proxy+}
+            Method: any
+
+Outputs:
+  ServerlessApiApi:
+    Description: URL for application
+    Value: !Sub 'https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/api/posts'
+    Export:
+      Name: ServerlessApiApi
