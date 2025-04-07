@@ -24,7 +24,7 @@ jobs:
            aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
            aws-region: us-east-1
        - name: deploy
-         run: aws lambda update-function-code --function-name=blogPostAPI --zip-file=./target/serverless-api-1.0-SNAPSHOT-lambda-package.zip
+         run: aws lambda update-function-code --function-name=blogPostAPI --zip-file=fileb://./target/serverless-api-1.0-SNAPSHOT-lambda-package.zip
          
        
        
