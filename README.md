@@ -38,6 +38,7 @@ Using a new shell, you can send a test ping request to your API:
 ## Deploying to AWS
 To deploy the application in your AWS account, you can use the SAM CLI's guided deployment process and follow the instructions on the screen
 
+I used GitHub actions file .github/workflows/main.yml 
 ```
 $ sam deploy --guided
 ```

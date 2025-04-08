@@ -13,8 +13,6 @@ jobs:
          with:
           java-version: '17'
           distribution: 'temurin'
-       - name: Java vesion test
-         run: java --version
        - name: Run the Maven package phase
          run: mvn --batch-mode --update-snapshots package
        - name: Configure AWS Credentials
